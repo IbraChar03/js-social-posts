@@ -154,9 +154,9 @@ posts.forEach(element => {
     function(){
         
     count=element.likes
-    span.classList.toggle("increment");
+    button.classList.toggle("increment");
      
-    if(span.classList.contains("increment")){
+    if(button.classList.contains("increment")){
     count++; 
 }
   else{
