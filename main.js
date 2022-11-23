@@ -55,7 +55,7 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
-
+let arrayid = []
 let container=document.getElementById("container")
 posts.forEach(element => {
     let count=element.likes;
@@ -143,7 +143,6 @@ posts.forEach(element => {
       counter.innerHTML = `Piace a ${count} persone`
       button.style.color = "blue";
 
-     let arrayid = []
      if(count++){
          arrayid.push(element.id)
        }
@@ -151,6 +150,7 @@ posts.forEach(element => {
      console.log(arrayid);
 
     }, {once : true}
+    
     );
    
      let counter = document.createElement("div");
