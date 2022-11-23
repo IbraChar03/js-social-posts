@@ -136,3 +136,6 @@ h1 {
 .like-button__icon{
     cursor: pointer;
 }
+.increment{
+    color: blue;
+}

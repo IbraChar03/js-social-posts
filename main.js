@@ -152,24 +152,26 @@ posts.forEach(element => {
 
     span.addEventListener("click",
     function(){
+      button.classList.add("increment");
+      
       count++;
-      counter.innerHTML = `Piace a ${count} persone`
-      button.style.color = "blue";
-
+      counter.innerHTML = `Piace a ${count} persone`;
+      
      if(count++){
          arrayid.push(element.id)
        }
-     
+      
      console.log(arrayid);
 
-    }, {once : true}
+    },{ once: true } 
     
     );
+
    
-     let counter = document.createElement("div");
-     counter.classList.add("likes__counter");
-      counter.innerHTML = `Piace a ${element.likes} persone`
-     like.append(counter);
+    let counter = document.createElement("div");
+    counter.classList.add("likes__counter");
+    counter.innerHTML = `Piace a ${element.likes} persone`
+    like.append(counter);
 
     let b = document.createElement("b");
     b.setAttribute("id","like-counter-1");
