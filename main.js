@@ -78,6 +78,19 @@ posts.forEach(element => {
     let imgIcon = document.createElement("img");
     imgIcon.classList.add("profile-pic");
     imgIcon.src = element.author.image;
+    if(element.author.image == null){
+        imgIcon=document.createElement("p")
+        imgIcon.classList.add("name")
+        imgIcon.classList.add("profile-pic");
+        let string = element.author.name;
+        var names = string.split(/\s+/);
+        names[0] = names[0].substr(0, 1);
+        names[1] = names[1].substr(0, 1);
+        var name_abbr = names.join(' ');
+        console.log(name_abbr)
+        
+        imgIcon.innerHTML=name_abbr
+    }
     metaIcon.append(imgIcon);
 
     let metaData = document.createElement("div");

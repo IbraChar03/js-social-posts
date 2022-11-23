@@ -66,6 +66,13 @@ h1 {
     border-radius: 50%;
     max-width: 60px;
 }
+.name{
+    font-size: 25px;
+    background-color:#D6E4E5;
+    padding: 10px 13px;
+   
+    
+}
 
 .profile-pic-default {
     display: flex;
