@@ -152,18 +152,26 @@ posts.forEach(element => {
 
     span.addEventListener("click",
     function(){
-      button.classList.add("increment");
+        
+    count=element.likes
+    span.classList.toggle("increment");
+     
+    if(span.classList.contains("increment")){
+    count++; 
+}
+  else{
+    count-1; 
+}
       
-      count++;
-      counter.innerHTML = `Piace a ${count} persone`;
+    counter.innerHTML = `Piace a ${count} persone`;
       
-     if(count++){
-         arrayid.push(element.id)
-       }
+    if(count++){
+          arrayid.push(element.id)
+        }
       
-     console.log(arrayid);
+    console.log(arrayid);
 
-    },{ once: true } 
+    },
     
     );
 
