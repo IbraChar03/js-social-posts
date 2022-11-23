@@ -139,15 +139,16 @@ posts.forEach(element => {
 
     span.addEventListener("click",
     function(){
-     count++;
+      count++;
+      counter.innerHTML = `Piace a ${count} persone`
      button.style.color="blue";
 
-    }
+    }, {once : true}
     );
 
      let counter = document.createElement("div");
      counter.classList.add("likes__counter");
-     counter.innerHTML = `Piace a ${count} persone`
+      counter.innerHTML = `Piace a ${element.likes} persone`
      like.append(counter);
 
     let b = document.createElement("b");
@@ -156,3 +157,4 @@ posts.forEach(element => {
 
     
 });
+
