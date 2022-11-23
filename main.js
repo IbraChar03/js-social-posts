@@ -141,11 +141,18 @@ posts.forEach(element => {
     function(){
       count++;
       counter.innerHTML = `Piace a ${count} persone`
-     button.style.color="blue";
+      button.style.color = "blue";
+
+     let arrayid = []
+     if(count++){
+         arrayid.push(element.id)
+       }
+     
+     console.log(arrayid);
 
     }, {once : true}
     );
-
+   
      let counter = document.createElement("div");
      counter.classList.add("likes__counter");
       counter.innerHTML = `Piace a ${element.likes} persone`
@@ -157,4 +164,5 @@ posts.forEach(element => {
 
     
 });
+
 
